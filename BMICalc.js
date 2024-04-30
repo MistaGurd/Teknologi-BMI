@@ -62,22 +62,17 @@ $(function () {
         }
 
         function calcMetricBMI(heightInCentimeters, weightInKilos) {
-          // If string, apply isNaN
-          heightInCentimeters = Number(heightInCentimeters);
-          weightInKilos = Number(weightInKilos);
-          if (isNaN(heightInCentimeters) || isNaN(weightInKilos)) {
-            console.log("calcMetricBMI - expects all inputs valid numbers");
-            throw "expects all inputs valid numbers";
-          }
-          var BMI;
-          var heightInMeters = heightInCentimeters / 100;
-          BMI = (weightInKilos) / (heightInMeters * heightInMeters);
-          
-          // Round up to 2 decimal places
-          BMI = Math.ceil(BMI * 100) / 100;
-          
-          return BMI;
-        }
+            // If string, apply isNaN
+            heightInCentimeters = Number(heightInCentimeters);
+            weightInKilos = Number(weightInKilos);
+            if (isNaN(heightInCentimeters) || isNaN(weightInKilos)) {
+                console.log("calcMetricBMI - expects all inputs valid numbers");
+                throw "expects all inputs valid numbers";
+            }
+            var BMI;
+            var heightInMeters = heightInCentimeters / 100;
+            BMI = (weightInKilos) / (heightInMeters * heightInMeters);
+            return BMI;
         }
         var myForm2 = document.getElementById("metricFill");
         var j1 = document.getElementById("heightInCentimeters").value;
