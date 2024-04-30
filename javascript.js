@@ -72,7 +72,7 @@ $(function () {
             var BMI;
             var heightInMeters = heightInCentimeters / 100;
             BMI = (weightInKilos) / (heightInMeters * heightInMeters);
-            return BMI;
+            return Math.round(BMI);
         }
         var myForm2 = document.getElementById("metricFill");
         var j1 = document.getElementById("heightInCentimeters").value;
