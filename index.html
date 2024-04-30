@@ -10,41 +10,21 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
     <link rel="stylesheet" href="../stylesheet.css">
-    <script src="https://github.com/MistaGurd/Teknologi-BMI/blob/main/javascript.js"></script>
+    <script src="https://krander.github.io/BMI-calculator/javascript.js"></script>
+    
 </head>
-
-<body>
-    <div id="TopContent">
-        <h1>Body Mass Index Calculator</h1>
-        <p>Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women.</p>
-        <ol>
-            <li>Enter your weight and height using standard or metric measures.</li>
-            <li>Select "Submit" and your BMI will appear below.</li>
-        </ol>
-        <br>
-    </div>
-
-
-    <div hidden id="calculator" title="Calculate" id="realcalc">
-        <div id="SideBMI">
-            <h3>BMI Categories</h3>
-            <p>Underweight = &le;18.5<br> Normal weight = 18.5 - 24.9<br> Overweight = 25 - 29.9<br> Obesity = &ge;30</p><br>
-            <b><a href="https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmi_tbl.htm"> The BMI Tables</a></b><br><br>
-            <b><a href="https://www.nhlbi.nih.gov/health/educational/lose_wt/index.htm">Aim for a Health Weight:</a></b><br>
-            <a href="https://www.nhlbi.nih.gov/health/educational/lose_wt/risk.htm#limitations">Limitations of the BMI</a><br>
-            <a href="https://www.nhlbi.nih.gov/health/educational/lose_wt/risk.htm">Assessing Your Risk</a><br>
-            <a href="https://www.nhlbi.nih.gov/health/educational/lose_wt/control.htm">Controlling Your Weight</a><br>
-            <a href="https://www.nhlbi.nih.gov/health/educational/lose_wt/eat/recipes.htm">Recipes</a>
-        </div>
-
+        <div id="tabs">
+            <ul>
+                <li><a href="#tabs-2">Metric</a></li>
+            </ul>
             <div id="tabs-2">
                 <form id="metricFill" action="sampleactionOne.html">
-                    <label for="height" class="heightCent">Your Height: </label>
+                    <label for="height" class="heightCent">Din højde: </label>
                     <input type="number" id="heightInCentimeters" class="required digits"> cm. &nbsp;<br><br>
-                    <label for="weight" class="weightkg">Your Weight: </label>
+                    <label for="weight" class="weightkg">Din vægt: </label>
                     <input type="number" id="weightInKilos" class="required digits"> kg. &nbsp;<br><br>
-                    <input type='submit' value='Submit' name="submit" id='submitme'><br><br><br>
-                    <label for="output" class="BMI">Your BMI:</label>
+                    <input type='submit' value='Beregn' name="submit" id='submitme'><br><br><br>
+                    <label for="output" class="BMI">Din BMI:</label>
                     <output type="text" id="BMIMetric"></output>
                 </form>
                 <br>
